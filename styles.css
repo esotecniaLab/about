@@ -103,3 +103,137 @@ p {
 .card a:hover {
     color: #0056b3;
 }
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 4rem; /* Título XXL */
+    color: #000;
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    --font-family: 'Bodoni Moda', serif;
+
+}
+
+#quienes-somos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    color: #e91e63;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2196f3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+
+#que-es {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-columns div {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color:#000;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+* Media Queries para Responsividad */
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .content-columns {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    #quienes-somos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
